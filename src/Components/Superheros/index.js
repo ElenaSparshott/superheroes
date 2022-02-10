@@ -5,12 +5,11 @@ function SuperheroViewer({ heroNumber }) {
 
   useEffect(() => {
     const superheroData = async () => {
-      const response = fetch(
+      const response = await fetch(
         `/api/10228093672555590/${heroNumber}`
       );
-      response
-      .then((r) => setSuperhero(r.json()))
-      .catch((reason) => console.log(reason));
+      const data = await response.json()
+      setSuperhero(data)
     };
 
     superheroData();
