@@ -16,7 +16,6 @@ function App() {
     
     const handleInputTextChange = (event) => {
         setInputValue(event.target.value)
-        console.log(inputValue)
     }
 
   return (
